@@ -7,7 +7,7 @@ urlpatterns = [
     path("", views.news_of_day, name="newsToday"),
     path("archives/<slug:past_date>/", views.past_days_news, name="pastNews"),
     path('search/', views.search_results, name='search_results'),
-    path('article/<int:article_id>', views.article, name='article')
+    path('article/<int:article_id>', views.article, name='article'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
